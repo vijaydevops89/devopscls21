@@ -1,7 +1,5 @@
 #!/bin/bash
 
+free -m
 
-
-df -h
-
-echo "first job build succesfully"
+date

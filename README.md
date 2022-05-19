@@ -1,15 +1,20 @@
-# simple-java-maven-app
+JavaParser and Maven sample
+---
 
-This repository is for the
-[Build a Java app with Maven](https://jenkins.io/doc/tutorials/build-a-java-app-with-maven/)
-tutorial in the [Jenkins User Documentation](https://jenkins.io/doc/).
+A fully working sample Maven project that parses and generates code with [JavaParser](http://www.javaparser.org)
 
-The repository contains a simple Java application which outputs the string
-"Hello world!" and is accompanied by a couple of unit tests to check that the
-main application works as expected. The results of these tests are saved to a
-JUnit XML report.
+This is targeted at people without [Maven](https://maven.apache.org/) experience.
 
-The `jenkins` directory contains an example of the `Jenkinsfile` (i.e. Pipeline)
-you'll be creating yourself during the tutorial and the `scripts` subdirectory
-contains a shell script with commands that are executed when Jenkins processes
-the "Deliver" stage of your Pipeline.
+To build it, you will need to download and unpack the latest (or recent) version of Maven (https://maven.apache.org/download.cgi)
+and put the `mvn` command on your path.
+Then, you will need to install a Java 1.8 (or higher) JDK (not JRE!), and make sure you can run `java` from the command line.
+Now you can run `mvn clean install` and Maven will compile your project, 
+an put the results it in two jar files in the `target` directory.
+If you like to run from the command line,
+execute `java -jar target/javaparser-maven-sample-1.0-SNAPSHOT-shaded.jar`.
+
+How you run this code is up to you, but usually you would start by using an IDE like [NetBeans](https://netbeans.org/), [Intellij IDEA](https://www.jetbrains.com/idea/), or [Eclipse](https://eclipse.org/ide/).
+
+The Maven dependencies may lag behind the official releases a bit.
+
+If you notice some problems with this setup, please open an issue.
